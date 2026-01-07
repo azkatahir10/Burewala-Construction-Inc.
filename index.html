@@ -13,7 +13,10 @@
     <nav class="navbar">
         <div class="container nav-container">
             <a href="#" class="logo">
-                <h1>Burewala Construction Inc.</h1>
+                <div class="logo-container">
+                    <!-- SVG Logo -->
+                    <img src="media\burewala_logo_white_bg.jpg" alt="Burewala Construction Inc." class="logo-image">
+                </div>
             </a>
             <button class="menu-toggle" id="menuToggle">
                 <i class="fas fa-bars"></i>
@@ -27,7 +30,7 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Interior Image -->
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
@@ -41,7 +44,7 @@
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About Section with Interior Image -->
     <section id="about" class="about">
         <div class="container">
             <h2 class="section-title">About Burewala Construction</h2>
@@ -53,7 +56,7 @@
                     <p>When it comes to construction and remodeling, it takes a lot of work to transform a client's ambitions into reality. Our team understands the value of excellent work, clear communication, and close attention to detail. From planning and designing to execution and finishing touches, our skilled contractors have a wealth of knowledge and expertise in every area of construction.</p>
                 </div>
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Construction team at work">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Beautiful modern interior design">
                 </div>
             </div>
         </div>
@@ -65,7 +68,7 @@
             <h2 class="section-title">Our Construction Services</h2>
             <p class="section-subtitle">Comprehensive range of remodeling services to fit your requirements</p>
             <div class="services-grid" id="servicesGrid">
-                <!-- Services will be populated by JavaScript -->
+                <!-- Services will be populated by JavaScript with images -->
             </div>
         </div>
     </section>
@@ -90,7 +93,7 @@
                     <div class="contact-details">
                         <div class="contact-item">
                             <i class="fas fa-phone"></i>
-                            <span>(555) 123-4567</span>
+                            <span>+1 (917) 769-0332</span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
@@ -101,12 +104,7 @@
                             <span>123 Construction Ave, Suite 100<br>Your City, State 12345</span>
                         </div>
                     </div>
-                    <div class="business-hours">
-                        <h4>Business Hours</h4>
-                        <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
-                        <p>Saturday: 9:00 AM - 2:00 PM</p>
-                        <p>Sunday: Closed</p>
-                    </div>
+                    <!-- Business Hours Section Removed -->
                 </div>
                 <div class="contact-form">
                     <h3>Request a Free Quote</h3>
@@ -127,7 +125,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <textarea id="message" rows="5" placeholder="Tell us about your project..."></textarea>
+                            <textarea id="message" rows="5" placeholder="Tell us about your project..." required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Submit Request</button>
                     </form>
@@ -141,8 +139,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <h3>Burewala Construction Inc.</h3>
-                    <p>We Build It, You Love It</p>
+                    <!-- SVG Logo in Footer - Clean layout without container -->
+                    <img src="media\burewala_logo_white_bg.jpg" alt="Burewala Construction Inc." class="footer-logo-image">
                 </div>
                 <div class="footer-links">
                     <h4>Quick Links</h4>
@@ -156,11 +154,18 @@
                 <div class="footer-social">
                     <h4>Connect With Us</h4>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-houzz"></i></a>
+                        <!-- WhatsApp link that opens WhatsApp with the company number -->
+                        <a href="https://wa.me/19177690332?text=Hello%20Burewala%20Construction%20Inc.!%20I'm%20interested%20in%20your%20services." target="_blank" title="Chat with us on WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <!-- Email link that opens Gmail compose window -->
+                        <a href="#" id="gmailCompose" title="Email us via Gmail">
+                            <i class="fas fa-envelope"></i>
+                        </a>
                     </div>
+                    <p class="social-note">
+                        Click to message us directly
+                    </p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -169,6 +174,8 @@
         </div>
     </footer>
 
+    <!-- EmailJS Script -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
