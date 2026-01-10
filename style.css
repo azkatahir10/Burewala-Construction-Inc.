@@ -337,6 +337,9 @@ a {
     box-shadow: 0 5px 15px var(--shadow);
     transition: all 0.3s ease;
     border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .service-card:hover {
@@ -348,6 +351,7 @@ a {
     height: 200px;
     overflow: hidden;
     position: relative;
+    flex-shrink: 0;
 }
 
 .service-image img {
@@ -363,6 +367,9 @@ a {
 
 .service-content {
     padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .service-content h3 {
@@ -387,6 +394,44 @@ a {
     color: var(--steel-gray);
     font-size: 1rem;
     line-height: 1.6;
+    flex-grow: 1;
+    margin-bottom: 15px;
+}
+
+/* WhatsApp Button on Service Cards */
+.service-whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #25D366; /* WhatsApp green */
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.service-whatsapp-btn:hover {
+    background-color: #128C7E; /* Darker WhatsApp green */
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+}
+
+.service-whatsapp-btn:active {
+    transform: translateY(-1px);
+}
+
+.service-whatsapp-btn i {
+    font-size: 1.2rem;
 }
 
 /* CTA Section */
@@ -692,6 +737,16 @@ a {
     .footer-logo-image {
         height: 80px !important;
     }
+    
+    /* WhatsApp button mobile adjustments */
+    .service-whatsapp-btn {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .service-whatsapp-btn i {
+        font-size: 1.1rem;
+    }
 }
 
 @media (max-width: 576px) {
@@ -738,6 +793,16 @@ a {
     }
     
     .website-link {
+        font-size: 1rem;
+    }
+    
+    /* WhatsApp button small screen adjustments */
+    .service-whatsapp-btn {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+    }
+    
+    .service-whatsapp-btn i {
         font-size: 1rem;
     }
 }

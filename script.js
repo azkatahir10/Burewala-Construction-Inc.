@@ -7,7 +7,7 @@ const quoteForm = document.getElementById('quoteForm');
 const currentYearSpan = document.getElementById('currentYear');
 const gmailComposeBtn = document.getElementById('gmailCompose');
 
-// Services Data - Removed icon property
+// Services Data - Updated with WhatsApp button
 const services = [
     {
         name: "Decks",
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setupLazyLoading();
 });
 
-// Render services to the grid with images (no icons)
+// Render services to the grid with WhatsApp button
 function renderServices() {
     servicesGrid.innerHTML = '';
     
@@ -103,7 +103,11 @@ function renderServices() {
         const serviceCard = document.createElement('div');
         serviceCard.className = 'service-card';
         
-        // Simplified HTML without icon
+        // Create WhatsApp message for this service
+        const whatsappMessage = `Hello Burewala Construction! I'm interested in your ${service.name} service. Can you provide more information and a quote?`;
+        const whatsappUrl = `https://wa.me/19177690332?text=${encodeURIComponent(whatsappMessage)}`;
+        
+        // HTML with WhatsApp button
         serviceCard.innerHTML = `
             <div class="service-image">
                 <img src="${service.image}" alt="${service.name} service" loading="lazy">
@@ -111,6 +115,10 @@ function renderServices() {
             <div class="service-content">
                 <h3>${service.name}</h3>
                 <p>${service.description}</p>
+                <a href="${whatsappUrl}" target="_blank" class="service-whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i>
+                    Contact Now: +1 (917) 769-0332
+                </a>
             </div>
         `;
         
@@ -158,6 +166,8 @@ function setupMobileMenu() {
 
 // Setup Gmail compose button to open compose window
 function setupGmailCompose() {
+    if (!gmailComposeBtn) return;
+    
     gmailComposeBtn.addEventListener('click', function(e) {
         e.preventDefault();
         
