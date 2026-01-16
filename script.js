@@ -172,7 +172,7 @@ function setupGmailCompose() {
         e.preventDefault();
         
         // Create Gmail compose URL with parameters for small window
-        const to = 'info@burewalaconstruction.com';
+        const to = 'burewalaconstructioninc@gmail.com';
         const subject = 'Construction Inquiry from Website';
         const body = `Hello Burewala Construction Team,%0A%0AI would like to inquire about your services.%0A%0ABest regards,%0A[Your Name]`;
         
@@ -251,7 +251,7 @@ function setupForm() {
 // Function to open Gmail compose window with form data
 function openGmailComposeWithFormData(formData, submitBtn, originalText) {
     // Create email content
-    const to = 'info@burewalaconstruction.com';
+    const to = 'burewalaconstructioninc@gmail.com';
     const subject = `Quote Request: ${formData.service}`;
     const body = `
 Hello Burewala Construction Team,
@@ -334,7 +334,7 @@ function sendEmailWithEmailJS(formData, submitBtn, originalText) {
         serviceId: 'YOUR_SERVICE_ID',
         templateId: 'YOUR_TEMPLATE_ID',
         userId: 'YOUR_USER_ID',
-        companyEmail: 'info@burewalaconstruction.com'
+        companyEmail: 'burewalaconstructioninc@gmail.com'
     };
     
     // Initialize EmailJS if not already initialized
